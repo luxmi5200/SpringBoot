@@ -14,19 +14,15 @@ import com.example.SpringBootApps.entity.Product;
 @RequestMapping("/api/v1")
 public class ProductController {
 
-
     
     @GetMapping(path = "/hello")
     public String hello() {
-    	return "Hellow World";
+    	return "Hello World";
     }
     
     @GetMapping(path="/product")
     public ResponseEntity<Product> getProduct() {
     	return ResponseEntity.ok(new Product(1l, "Mobile", 10.0, 5));
     }
-
-
-
 }
 
